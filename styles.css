@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    width: 30%;
+    height: 70vh;
+    padding: 25px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 10%;
+    font-size: 35px;
+    text-align: center;
+    color: #333;
+}
+/* all inputs styling start */
+.input input {
+    width: 100%;
+    margin-bottom: 5%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.input input:focus {
+    border-color: #8e2de2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(142, 45, 226, 0.5);
+}
+.input input:focus::placeholder{
+    color: #8e2de2;
+}
+/* all inputs styling end */
+
+/* all buttons styling start */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #4a00e0;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background-color: #8e2de2;
+    transition: all 0.5s;
+}
+/* all buttons styling end */
+
+/* text with link start */
+p {
+    margin-top: 8%;
+    text-align: center;
+}
+p a {
+    color: #8e2de2;
+    text-decoration: none;
+    font-weight: bold;
+}
+p a:hover {
+    text-decoration: underline;
+}
+/* text with link end */
