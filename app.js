@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 import { auth } from "./firebase.mjs";
 
 let loginEmail = document.getElementById('loginEmail')
@@ -8,6 +8,7 @@ let signupName = document.getElementById('signupName')
 let signupEmail = document.getElementById('signupEmail')
 let signupPass = document.getElementById('signupPass')
 let signupBtn = document.getElementById('signupBtn')
+let signoutBtn = document.getElementById('signoutBtn')
 
 signupBtn.addEventListener('click',()=>{
     createUserWithEmailAndPassword(auth, signupEmail.value, signupPass.value)
@@ -100,7 +101,18 @@ loginBtn.addEventListener('click',()=>{
         });
     }
     
-    loginEmail.value = ''
-    loginPass.value = ''
+    // loginEmail.value = ''
+    // loginPass.value = ''
   });
+})
+
+signoutBtn.addEventListener('click',()=>{
+signOut(auth).then(() => {
+  // Sign-out successful.
+  console.log('Sign-out successful');
+  window.location.href = 'index.html'
+}).catch((error) => {
+  // An error happened.
+  console.log('error');
+});
 })
