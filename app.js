@@ -71,6 +71,13 @@ loginBtn.addEventListener('click',()=>{
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
+    setInterval(() => {
+      Swal.fire({
+        title: "Good job!",
+        text: "Login Successfully!",
+        icon: "success"
+      });
+    }, 1500);
     window.location.href = 'dashboard.html'
     // ...
   })
